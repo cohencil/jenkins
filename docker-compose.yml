@@ -1,0 +1,17 @@
+version: "3.6"
+
+services:
+  jenkins:
+    build: .
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - ${PWD}/jenkins.yml:/jenkins.yml
+      - ${PWD}/src:/var/jenkins_lib/src:ro
+      - ${PWD}/.git:/var/jenkins_lib/.git:ro
+      - ${PWD}/jenkins_home:/var/jenkins_home
+      - ${PWD}/material-blue.css:/var/jenkins_home/userContent/material-blue.css
+    environment:
+      CASC_JENKINS_CONFIG: file:///jenkins.yml
+      JAVA_OPTS: -Djenkins.install.runSetupWizard=false
