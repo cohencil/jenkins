@@ -40,4 +40,4 @@ unclassified:
   simple-theme-plugin:
     elements:
       - cssUrl:
-          url: '/userContent/material-blue.css'
+          url: /userContent/material-blue.css
