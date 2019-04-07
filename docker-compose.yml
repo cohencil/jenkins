@@ -14,4 +14,6 @@ services:
       - ${PWD}/material-blue.css:/var/jenkins_home/userContent/material-blue.css
     environment:
       CASC_JENKINS_CONFIG: file:///jenkins.yml
-      JAVA_OPTS: "-Djenkins.install.runSetupWizard=false -Dorg.apache.commons.jelly.tags.fmt.timeZone=Asia/Jerusalem"
+      JAVA_OPTS: >
+        -Djenkins.install.runSetupWizard=false
+        -Dorg.apache.commons.jelly.tags.fmt.timeZone=Asia/Jerusalem
