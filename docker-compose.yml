@@ -7,13 +7,13 @@ services:
       - 8080:8080
       - 50000:50000
     volumes:
-      - ${PWD}/jenkins.yml:/jenkins.yml
+      - ${PWD}/casc_configs:/var/casc_configs
       - ${PWD}/src:/var/jenkins_lib/src:ro
       - ${PWD}/.git:/var/jenkins_lib/.git:ro
       - ${PWD}/jenkins_home:/var/jenkins_home
       - ${PWD}/material-blue.css:/var/jenkins_home/userContent/material-blue.css
     environment:
-      CASC_JENKINS_CONFIG: file:///jenkins.yml
+      CASC_JENKINS_CONFIG: /var/casc_configs
       JENKINS_ADMIN_PASSWORD: ${JENKINS_ADMIN_PASSWORD:-admin}
       JAVA_OPTS: >
         -Djenkins.install.runSetupWizard=false
