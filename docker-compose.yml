@@ -17,4 +17,4 @@ services:
       JENKINS_ADMIN_PASSWORD: ${JENKINS_ADMIN_PASSWORD:-admin}
       JAVA_OPTS: >
         -Djenkins.install.runSetupWizard=false
-        -Dorg.apache.commons.jelly.tags.fmt.timeZone=Asia/Jerusalem
+        -Dorg.apache.commons.jelly.tags.fmt.timeZone=UTC
