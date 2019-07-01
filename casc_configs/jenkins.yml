@@ -19,9 +19,8 @@ jenkins:
     standard:
       excludeClientIPFromCrumb: true
 
-security:
-  remotingCLI:
-    enabled: false
+  remotingSecurity:
+    enabled: true
 
 unclassified:
   globalLibraries:
@@ -41,3 +40,6 @@ unclassified:
     elements:
       - cssUrl:
           url: /userContent/material-blue.css
+
+  location:
+    adminAddress: noreply@domain.com
